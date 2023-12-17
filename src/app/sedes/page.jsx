@@ -7,7 +7,7 @@ const Sedes = async () => {
 
   return (
     <div className="w-max p-4 flex gap-4 ">
-      {sedes.map((e) => {
+      {sedes?.map((e) => {
         return (
           <div key={e._id} className='w-full p-4 bg-slate-900 text-slate-50 rounded-md '>
             <CardSedes  sedes={e} />
