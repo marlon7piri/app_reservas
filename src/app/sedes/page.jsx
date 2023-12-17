@@ -9,8 +9,8 @@ const Sedes = async () => {
     <div className="w-max p-4 flex gap-4 ">
       {sedes.map((e) => {
         return (
-          <div className='w-full p-4 bg-slate-900 text-slate-50 rounded-md '>
-            <CardSedes key={e._id} sedes={e} />
+          <div key={e._id} className='w-full p-4 bg-slate-900 text-slate-50 rounded-md '>
+            <CardSedes  sedes={e} />
           </div>
         );
       })}

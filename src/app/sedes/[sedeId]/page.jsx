@@ -9,8 +9,8 @@ const SedeId = async ({ params }) => {
     <div className="p-4 flex flex-wrap gap-4 ">
       {reservas.map((e) => {
         return (
-          <div className='w-[200px] h-[200px] p-4 bg-slate-900 text-slate-50 rounded-md '>
-            <CardReservas key={e._id} reservas={e} />
+          <div  key={e._id} className='w-[200px] h-[200px] p-4 bg-slate-900 text-slate-50 rounded-md '>
+            <CardReservas reservas={e} />
           </div>
         );
       })}
