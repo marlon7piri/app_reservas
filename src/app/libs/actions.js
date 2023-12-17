@@ -15,7 +15,7 @@ export const getSedes = async () => {
 
 export const getReservas= async () => {
     try {
-      const res = await fetch(`${process.env.NEXT_URL}/reservas`);
+      const res = await fetch(`${process.env.NEXT_URL}/reservas`,{cache:"no-store"});
   
       if (!res.ok) throw new Error("Fallo al realizar la peticion");
       const data = await res.json();

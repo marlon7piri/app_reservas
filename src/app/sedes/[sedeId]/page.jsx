@@ -2,12 +2,12 @@ import { getReservas } from "@/app/libs/actions";
 import React from "react";
 import CardReservas from "./CardReservas";
 
-const SedeId = async ({ params }) => {
+const SedeId = async () => {
 
     const  reservas = await getReservas()
   return (
     <div className="p-4 flex flex-wrap gap-4 ">
-      {reservas.map((e) => {
+      {reservas?.map((e) => {
         return (
           <div  key={e._id} className='w-[200px] h-[200px] p-4 bg-slate-900 text-slate-50 rounded-md '>
             <CardReservas reservas={e} />
