@@ -1,6 +1,6 @@
 export const getSedes = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/sedes");
+    const res = await fetch(`${process.env.NEXT_URL}/sedes`);
 
     if (!res.ok) throw new Error("Fallo al realizar la peticion");
     const data = await res.json();
@@ -15,7 +15,7 @@ export const getSedes = async () => {
 
 export const getReservas= async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/reservas");
+      const res = await fetch(`${process.env.NEXT_URL}/reservas`);
   
       if (!res.ok) throw new Error("Fallo al realizar la peticion");
       const data = await res.json();
