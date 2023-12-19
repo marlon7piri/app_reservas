@@ -3,7 +3,7 @@
 
 export const getSedes = async () => {
   try {
-    const res = await fetch(`https://app-reservas.vercel.app/sedes`);
+    const res = await fetch(`https://app-reservas.vercel.app/api/sedes`);
 
     if (!res.ok) throw new Error("Fallo al realizar la peticion");
     const data = await res.json();
@@ -16,7 +16,7 @@ export const getSedes = async () => {
 
 export const getReservas = async () => {
   try {
-    const res = await fetch(`https://app-reservas.vercel.app/reservas`, {
+    const res = await fetch(`https://app-reservas.vercel.app/api/reservas`, {
       cache: "no-cache",
     });
 
@@ -34,7 +34,7 @@ export const getReservas = async () => {
 export const crearReservas = async (formData) => {
   try {
     const res = await fetch(
-      `https://app-reservas.vercel.app/reservas`,
+      `https://app-reservas.vercel.app/api/reservas`,
       {
         method: "POST",
         headers: {
