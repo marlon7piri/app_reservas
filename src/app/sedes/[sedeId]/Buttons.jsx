@@ -14,7 +14,7 @@ const Buttons = ({ id }) => {
     try {
       setLoading(true);
       const res = await fetch(
-        `http://localhost:3000/api/reservas/${id}`,
+        `${process.env.NEXT_URL}/reservas/${id}`,
         {
           method: "DELETE",
         },
