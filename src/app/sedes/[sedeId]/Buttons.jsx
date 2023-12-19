@@ -28,7 +28,7 @@ const Buttons = ({ id }) => {
         throw new Error("Fallo al realizar la peticion");
       }
 
-      toast.success("Reserva creada")
+      toast.success("Reserva Eliminada")
       router.refresh();
 
       const reservadeleted = await res.json();
