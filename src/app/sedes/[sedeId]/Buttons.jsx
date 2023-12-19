@@ -14,7 +14,7 @@ const Buttons = ({ id }) => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.NEXT_URL}/reservas/${id}`,
+        `https://app-reservas.vercel.app/api/reservas/${id}`,
         {
           method: "DELETE",
         },
