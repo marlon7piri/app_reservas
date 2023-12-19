@@ -5,7 +5,7 @@ const CardSedes = ({sedes}) => {
 
 
   return (
-    <Link href={`/sedes/${sedes.sede}`} >
+    <Link href={`/sedes/${sedes.sede}`} className='w-[200px] '>
         <p>{sedes.direccion}</p>
         <p>{sedes.horario}</p>
         <p>{sedes.telefono}</p>

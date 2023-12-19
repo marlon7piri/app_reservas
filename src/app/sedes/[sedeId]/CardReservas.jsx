@@ -1,17 +1,25 @@
-import Link from 'next/link'
-import React from 'react'
 
-const CardReservas = ({reservas}) => {
 
+import Link from "next/link";
+import React from "react";
+import Buttons from "./Buttons";
+
+const CardReservas = ({ reservas }) => {
+  
+
+  
 
   return (
-    <Link href={`/sedes/${reservas._id}`} >
+    <div className="flex justify-between flex-col ">
+      <div className="h-full  p-4">
         <p>Nombre: {reservas.nombre}</p>
-        <p>Fecha {reservas.fecha}</p>
-        <p>Comensales {reservas.comensales}</p>
-        <p>Sede {reservas.sede}</p>
-    </Link>
-  )
-}
+        <p>Fecha: {reservas.fecha}</p>
+        <p>Comensales: {reservas.comensales}</p>
+        <p>Sede: {reservas.sede}</p>
+      </div>
+      <Buttons  id ={reservas._id}/>
+    </div>
+  );
+};
 
-export default CardReservas
+export default CardReservas;
